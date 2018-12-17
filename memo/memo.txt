@@ -1,0 +1,26 @@
+~~けんきうないよう~~
+仮想ルーター複数(4とか？)立てて、それ同士でルーティング
+仮想マシン一つ立ててルーターにアクセス?できるか確認
+
+*参考URLとか
+仮想ルーター : vyosを使用
+vyosコンテナ作成 -> https://hub.docker.com/r/mnagaku/vyos/
+vyosの設定とか -> http://akkkix.hatenablog.com/entry/2017/01/27/185318
+ルーティング -> https://ameblo.jp/principia-ca/entry-12103919307.html
+  #Network.pngは概略図？
+openvswitch -> http://komeiy.hatenablog.com/entry/2015/06/26/233746
+
+
+*コマンドメモ
+#vyosstart
+docker run -d --name vyos --privileged -v /lib/modules:/lib/modules eveatk/vyos /sbin/init
+#その後
+docker exec -it vyos /bin/vbash
+su - vyos
+
+
+*verとかメモ
+vyos : vyos-1.1.8-amd64
+docker : Docker version 18.09.0, build 4d60db4
+openvswitch-common  : 2.9.0
+openvswitch-switch : 2.9.0

@@ -1,0 +1,35 @@
+*docker buildしようとしたらネットワークに繋がってない感じの挙動した話
+  FROM ubuntu18.04
+  RUN apt-get update
+みたいな感じで書いてたら
+  Err:1 http://archive.ubuntu.com/ubuntu bionic InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+  Err:2 ……
+って感じで、接続できてなさそうな挙動のエラーはいた
+
+1.対処法はここ(https://qiita.com/hirosemi/items/0574a4b044f46c6ac5af)参考にできそう?
+試してる途中 -> docker.service.dなんか無いんやが？？？？？？？
+
+2.次はこっちを参考に
+(https://qiita.com/Riliumph/items/921e76444ea6ba145294#%E6%96%B9%E6%B3%95%EF%BC%92%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E8%A8%AD%E5%AE%9A%E3%81%AB%E5%8A%A0%E3%81%88%E3%81%A6%E3%81%BF%E3%81%9F)
+
+DNSサーバのIPは"/etc/resolv.conf"のnameserver？  -> じゃなくてdig www.kct.ac.jp で出てくるやつ
+->できねえ！！
+docker run --dnsでdns鯖のip当ててもできなかった
+
+
+NEXT->
+1x認証(RADIUS認証)を高専では使ってるっぽい？
+それ対策できればなんとかなりそう？
+
+
+*2018/11/21
+な　ん　か　動　い　た
+原因不明 NetworkTestみたいなネットワーク設定作ったくらいしか心当たりない
+中身も特にいじってない "docker network create NetworkTest"って感じでやっただけ
+なんで…………？？？？？？
+
+
+*2018/12/12
+~研究内容変更のお知らせ~
+memoファイル新しくする
