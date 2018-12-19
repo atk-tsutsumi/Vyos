@@ -1,0 +1,7 @@
+・network設定をdockerfileで(CMD?)できないか
+・できないならshファイルを使ってできないか というかやれ
+  ・構成としては以下のとおりになりそう？
+    1.管理sh : makesh実行,Dockerコマンド(run,exec)実行
+    2.makesh.sh : 用意するコンテナ分の差分shを作成
+    3.dockerコマンド : ここで差分shを各コンテナにCOPY Dockerfileに記述 dokcer run時に-eオプションでshファイルを割当？
+    4.deletesh.sh : makeshで作ったshを削除 ゴミはゴミ箱に

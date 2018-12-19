@@ -13,10 +13,12 @@ openvswitch -> http://komeiy.hatenablog.com/entry/2015/06/26/233746
 
 *コマンドメモ
 #vyosstart
-docker run -d --name vyos --privileged -v /lib/modules:/lib/modules eveatk/vyos /sbin/init
+#"--net=none"　-> NICは自分で設定するので未設定状態でコンテナを起動する
+docker run -d --name vyos --privileged --net=none -v /lib/modules:/lib/modules eveatk/vyos /sbin/init
 #その後
 docker exec -it vyos /bin/vbash
 su - vyos
+#以下ネットワーク設定しなきゃいけない
 
 
 *verとかメモ
