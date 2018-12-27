@@ -5,3 +5,18 @@
     2.makesh.sh : 用意するコンテナ分の差分shを作成
     3.dockerコマンド : ここで差分shを各コンテナにCOPY Dockerfileに記述 dokcer run時に-eオプションでshファイルを割当？
     4.deletesh.sh : makeshで作ったshを削除 ゴミはゴミ箱に
+
+
+*Dockerfile
+mkdir -> add(copy) .sh -> chmod
+sh -> "su - vyos" & "config iroiro" no hutatu
+
+shell only de config NG?
+"su - vyos", "configure", "save" toka dekinasasou
+config no value dake shell de kaku?
+
+USER no sousa image :
+# su - vyos
+$ configure
+$ /xxx/xxx.sh
+$ save && exit
