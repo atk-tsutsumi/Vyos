@@ -20,6 +20,8 @@ docker exec -it vyos /bin/vbash
 su - vyos
 #以下ネットワーク設定しなきゃいけない
 
+#benri rm->stop demo
+docker rm $(docker ps -aq)
 
 *verとかメモ
 vyos : vyos-1.1.8-amd64

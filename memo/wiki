@@ -16,3 +16,18 @@
 
 *pull Vyos image
 sudo docker pull eveatk/vyos
+
+*
+/work/build.sh
+./makeRouter_Switch.sh
+./NICSetting.sh
+{ #i=1~4
+  docker exec -it vyos$i /bin/vbash
+  su - vyos
+  configure
+  /cfg/config.sh
+  save
+  exit
+  exit
+  exit
+}

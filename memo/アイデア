@@ -11,11 +11,10 @@
 mkdir -> add(copy) .sh -> chmod
 sh -> "su - vyos" & "config iroiro" no hutatu
 
-shell only de config NG?
-"su - vyos", "configure", "save" toka dekinasasou
-config no value dake shell de kaku?
+シェルのみで設定するのは難しそう？
+congigure後の設定だけシェルでやる形になりそう？
 
-USER no sousa image :
+USER 操作イメージ:
 # su - vyos
 $ configure
 $ /xxx/xxx.sh
