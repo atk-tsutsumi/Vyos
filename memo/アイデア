@@ -19,3 +19,8 @@ USER 操作イメージ:
 $ configure
 $ /xxx/xxx.sh
 $ save && exit
+
+vyosと仮想マシン(ubuntu)の接続？
+1.docker network createでネットワーク作成
+2.docker run時に--netで同じネットワーク?を指定
+でいけるのでは？？ vyos1にubuntuつなげて、vyos2からubuntuにping通るか試す　とかそんな感じでやりたい

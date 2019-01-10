@@ -28,3 +28,7 @@ vyos : vyos-1.1.8-amd64
 docker : Docker version 18.09.0, build 4d60db4
 openvswitch-common  : 2.9.0
 openvswitch-switch : 2.9.0
+
+*dockerのubuntuでping使えないとき
+apt update && apt-get install iputils-ping net-tools
+でいけるっぽい

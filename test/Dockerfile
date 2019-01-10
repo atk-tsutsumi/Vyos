@@ -1,7 +1,6 @@
 FROM eveatk/vyos
 
-RUN mkdir test
-COPY test1.sh /test/test1.sh
-COPY test2.sh /test/test2.sh
-COPY test.sh /test/test.sh
-RUN find /test -type f -exec chmod +x {} +
+ARG CONTAINER_ID=1
+RUN mkdir cfg
+COPY test.sh /cfg/config.sh
+RUN find /cfg -type f -exec chmod +x {} +
