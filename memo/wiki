@@ -17,7 +17,9 @@
 *pull Vyos image
 sudo docker pull eveatk/vyos
 
-*
+*gitから落としてくる
+これ : https://github.com/atk-tsutsumi/Vyos
+
 /work/build.sh
 ./makeRouter_Switch.sh
 ./NICSetting.sh
