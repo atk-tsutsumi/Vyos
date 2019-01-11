@@ -26,5 +26,8 @@ vyosと仮想マシン(ubuntu)の接続？
 でいけるのでは？？ vyos1にubuntuつなげて、vyos2からubuntuにping通るか試す　とかそんな感じでやりたい
 
 最後 :
-
+10台ぐらいでリング型ネットワーク構築？
 DoS攻撃 or フラッディングとかで攻撃してみる？
+
++ gccとかのコマンドが使えるようにしたい(以下のサイト参照)
+https://bi.biopapyrus.jp/os/linux/aptget.html
