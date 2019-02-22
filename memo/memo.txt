@@ -32,3 +32,5 @@ openvswitch-switch : 2.9.0
 *dockerのubuntuでping使えないとき
 apt update && apt-get install iputils-ping net-tools
 でいけるっぽい
+
+*ちなみにところどころ日本語が入ってないのはatomくんが日本語受け付けてくれなかったからです　なんでや
