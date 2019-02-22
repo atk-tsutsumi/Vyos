@@ -1,3 +1,4 @@
+環境構築
 #install docker
   https://docs.docker.com/install/linux/docker-ce/debian/#set-up-the-repository
 *uninstall old versions
@@ -15,11 +16,16 @@
   sudo apt-get install openvswitch-common openvswitch-switch
 
 #pull Vyos image
-sudo docker pull eveatk/vyos
+  sudo docker pull eveatk/vyos
+VyOSイメージの作り方は以下のサイトを参考に
+https://hub.docker.com/r/2stacks/vyos/
 
-#gitから落としてくる
+#gitからpull
 これ : https://github.com/atk-tsutsumi/Vyos
-以下/Vyosでの作業
+
+
+ルータの起動&設定
+(以下/Vyosでの作業)
 
 /work/build.sh
 ./makeRouter_Switch.sh
@@ -35,7 +41,8 @@ sudo docker pull eveatk/vyos
   exit
 }
 
-#各種shとかの説明
+
+各種shとかの説明
 /work
 /work/build.sh :
   Dockerイメージ生成用
@@ -67,7 +74,8 @@ sudo docker pull eveatk/vyos
   現在存在するすべてのコンテナを消す 問答無用で消す
   気をつけてね……
 
-#参考文献
+
+参考文献
 1 : ネットワーク初心者の新卒がDockerでネットワークの勉強をしてみた
   https://ameblo.jp/principia-ca/entry-12103919307.html
   (神 ほとんどこれとにらめっこしてた気がする)
