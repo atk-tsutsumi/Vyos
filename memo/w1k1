@@ -29,7 +29,7 @@ https://hub.docker.com/r/2stacks/vyos/
 
 /work/build.sh
 ./makeRouter_Switch.sh
-./NICSetting.sh
+./SetNIC.sh
 { #i=1~n  (nは後述)
   docker exec -it vyos$i /bin/vbash
   su - vyos
