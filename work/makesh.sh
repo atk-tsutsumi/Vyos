@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in `seq 1 10`
+for i in `seq 1 4`
 do
   touch vyos$i.sh
   echo "#!/bin/vbash" > vyos$i.sh
