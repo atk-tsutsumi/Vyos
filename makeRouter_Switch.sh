@@ -1,5 +1,5 @@
 #!/bin/sh
-for i in `seq 1 10`
+for i in `seq 1 4`
 do
   #vyosコンテナスタート
   sudo docker run -d --name vyos$i --privileged --net=none -v /lib/modules:/lib/modules vyos$i /sbin/init
