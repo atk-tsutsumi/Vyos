@@ -15,7 +15,7 @@
   #ここに仮想マシンのなんか色々
   #sudo ovs-docker add-port switch0 eth0 testubuntu --ipaddress=10.100.1.1/24
 sudo ovs-docker add-port switch1 eth0 vyos1 --ipaddress=10.0.1.1/24
-for i in `seq 2 10`
+for i in `seq 2 4`
 do
   x=`expr $i - 1`
   sudo ovs-docker add-port switch$x eth1 vyos$i --ipaddress=10.0.$x.2/24
